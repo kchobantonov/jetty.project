@@ -33,7 +33,6 @@ import java.util.jar.Manifest;
 
 import org.eclipse.jetty.util.IO;
 import org.eclipse.jetty.util.StringUtil;
-import org.eclipse.jetty.util.URIUtil;
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;
 
@@ -189,7 +188,7 @@ public class JarResource extends URLResource
                 }
 
                 String dotCheck = StringUtil.replace(entryName, '\\', '/');
-                dotCheck = URIUtil.canonicalPath(dotCheck);
+                // dotCheck = URIUtil.canonicalPath(dotCheck);
                 if (dotCheck == null)
                 {
                     if (LOG.isDebugEnabled())

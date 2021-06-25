@@ -363,7 +363,8 @@ public class PathResource extends Resource
     @Override
     public Resource addPath(final String subpath) throws IOException
     {
-        String cpath = URIUtil.canonicalPath(subpath);
+        // String cpath = URIUtil.canonicalPath(subpath);
+        String cpath = subpath;
 
         if ((cpath == null) || (cpath.length() == 0))
             throw new MalformedURLException(subpath);
