@@ -293,12 +293,8 @@ public abstract class SecurityHandler extends HandlerWrapper implements Authenti
         return getServer().getBean(IdentityService.class);
     }
 
-    /**
-     *
-     */
     @Override
-    protected void doStart()
-        throws Exception
+    protected void doStart() throws Exception
     {
         // copy security init parameters
         ContextHandler.Context context = ContextHandler.getCurrentContext();
@@ -334,11 +330,8 @@ public abstract class SecurityHandler extends HandlerWrapper implements Authenti
 
             if (_identityService == null)
             {
-                if (_realmName != null)
-                {
-                    setIdentityService(new DefaultIdentityService());
-                    manage(_identityService);
-                }
+                setIdentityService(new DefaultIdentityService());
+                manage(_identityService);
             }
             else
                 unmanage(_identityService);
@@ -456,11 +449,6 @@ public abstract class SecurityHandler extends HandlerWrapper implements Authenti
         _renewSession = renew;
     }
 
-    /*
-     * @see org.eclipse.jetty.server.Handler#handle(java.lang.String,
-     *      javax.servlet.http.HttpServletRequest,
-     *      javax.servlet.http.HttpServletResponse, int)
-     */
     @Override
     public void handle(String pathInContext, Request baseRequest, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
     {
