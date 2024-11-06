@@ -277,7 +277,7 @@
     <jmhjar.name>benchmarks</jmhjar.name>
     <jna.version>5.15.0</jna.version>
     <jnr-constants.version>0.10.4</jnr-constants.version>
-    <jnr-enxio.version>0.32.17</jnr-enxio.version>
+    <jnr-enxio.version>0.32.18</jnr-enxio.version>
     <jnr-ffi.version>2.2.16</jnr-ffi.version>
     <jnr-posix.version>3.1.19</jnr-posix.version>
     <jnr-unixsocket.version>0.38.22</jnr-unixsocket.version>
